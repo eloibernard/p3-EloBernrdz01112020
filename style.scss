@@ -7,7 +7,7 @@ $backg: #fbfbfb;
 body, html {
     height: 100%;
 }
-
+//mobilefirst//
 body {
     margin: 0; 
     background-color: $backg;
@@ -35,7 +35,8 @@ header {
   .wrapper {
     padding: 0;
     margin:0 auto;
-}
+  }
+  //localisation//
   nav {
     display: flex;
     flex-direction: row;
@@ -54,6 +55,7 @@ header {
     font-weight: bold;
   }
 
+  //section découvrez des restaus//
 .discover{
     background-color: #efefef;
     padding-top: 30px;
@@ -80,7 +82,7 @@ header {
     width: 50%;
     }
 }
-
+//section fonctionnement//
 .index-block {
     display: flex;
     flex-direction: row;
@@ -117,7 +119,7 @@ header {
     background-color: #f6f6f6;
     width: 100%;
   }
-  
+  //images des restaurants//
   image {
     margin: 0px 10% 0px 10px;
     margin-right: 10%;
@@ -140,7 +142,6 @@ header {
     margin-right: 25px;
   }
 
- 
   .click-new {
     border-radius: 10%;
     padding: 5px 10px;
@@ -167,3 +168,11 @@ caption {
     justify-content: space-between;
     text-align: left;
   }
+
+  //footer//
+  .footer {
+    background-color: #2c2c2c;
+    padding: 20px;
+  }
+  
+  
