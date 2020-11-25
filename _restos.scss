@@ -1,0 +1,82 @@
+html {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  
+  body {
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+  }
+  .main-menu {
+    margin-top: -30px;
+    background-color: $section-bg;
+    border-radius: 50px 50px 0px 0px;
+  }
+  h2.resto {
+    font-size: 27px;
+    font-weight: 500;
+    color: $text-color;
+    margin: 5px;
+    font-family: $font-logo;
+    margin: 30px 6% 0px;
+  }
+  .plat-type {
+    overflow: hidden;
+    min-height: 150px;
+  }
+  .plat-box {
+    background-color: $box-bg;
+    border-radius: $plat-box-radius;
+    overflow: hidden;
+  }
+  .plat-desc {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    width: 100%;
+  }
+
+   .prix {
+    margin-right: 0px;
+  }
+  .check-appear {
+    display: none;
+    background-color: $third-color;
+  }
+  .fas.fa-check {
+    background-color: $box-bg;
+    margin: 35%;
+    border-radius: 50%;
+    color: $third-color;
+    padding: 3px;
+  }
+  .btn {
+    border-radius: 30px 30px 30px 30px;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    background: linear-gradient($second-color, $primary-color);
+    border-style: hidden;
+    font-size: 15px;
+    font-weight: 400;
+    color: $box-bg;
+    margin: 0px 0px 50px;
+    box-shadow: 2px 2px 5px 2px $section-bg;
+  }
+  
+  .btn--order {
+    display: block;
+    margin: 40px auto 70px;
+    padding: 15px 50px;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  

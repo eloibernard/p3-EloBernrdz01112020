@@ -1,32 +1,30 @@
-* {
-    padding: 0;
-    margin: 0;
-}
-$backg: #fbfbfb;
+@import "variables";
+@import "restos";
 
-body, html {
-    height: 100%;
-}
 //mobilefirst//
 body {
+    padding: 0;
     margin: 0; 
     background-color: $backg;
     width: 100%;
     height: 100%;
     z-index: -1;
-    font-family: 'Roboto';
+    font-family: $font-text;
+}
+.resto-body{
+  justify-content: center;
 }
 header {
     padding-top: 10px;
     text-align: center;
-    font-family: "Shrikhand"
+    font-family: $font-logo;
   }
   h1 {
     font-size: 27px;
     font-weight: 500;
-    color: black;
+    color: $text-color;
     margin: 5px;
-    font-family: "Shrikhand";
+    font-family: $font-logo;
   }
    
   header:not(.header-title) {
@@ -36,6 +34,7 @@ header {
     padding: 0;
     margin:0 auto;
   }
+
   //localisation//
   nav {
     display: flex;
@@ -51,15 +50,17 @@ header {
     }
   p{ 
     padding-left: 5px;
-    font-family: 'Roboto';
+    font-family: $font-text;
     font-weight: bold;
   }
 
-  //section découvrez des restaus//
+  //section découvrez des restos//
 .discover{
-    background-color: #efefef;
+    background-color: $section-bg;
     padding-top: 30px;
     padding-bottom: 50px;
+
+    
     h2 {
         font-size: 18px;
         font-weight: 100;
@@ -68,20 +69,21 @@ header {
       }
       
     .p {
-        font-family: 'Roboto';
+        font-family: $font-text;
         font-size: 18px;
         font-weight: 150;
-        color: black;
+        color: $text-color;
         margin: 5px 10px 25px;
       }
      
    .btn{
-    background: linear-gradient(#FF79DA, #9356DC);
+    background: linear-gradient($second-color, $primary-color);
     padding: 5px 25px 5px 25px;
     border-radius: 25px;
     width: 50%;
     }
-}
+  }
+
 //section fonctionnement//
 .index-block {
     display: flex;
@@ -90,33 +92,35 @@ header {
     justify-content: left;
     padding: 0px 20px 0px 20px;
     margin: 12px;
-    padding: 10px;
-    background-color: #efefef;
+    padding: 12px;
+    background-color: $section-bg;
     border-radius: 15px;
     font-weight: bold;
   
 .step {
-    background-color: #9356dc;
+    background-color: $primary-color;
     border-radius: 50%;
-    color: white;
+    padding: 3px 6px;
+    margin-right: 4px;
+    color: $backg;
    
   }
 
-.index-section-function {
+.index-function {
     display: flex;
     flex-direction: column;
     padding-bottom: 50px;
   }
   
-  .index-section-function .fas {
-    margin-right: 4%;
+  .index-function .fas {
+    margin-right: 10%;
     color: #909090;
   }
 }
- .index-section-restos {
+ .index-restos {
     display: flex;
     flex-direction: column;
-    background-color: #f6f6f6;
+    background-color: $section-bg;
     width: 100%;
   }
   //images des restaurants//
@@ -125,7 +129,7 @@ header {
     margin-right: 10%;
     min-width: 96%;
     height: 250px;
-    background-color: white;
+    background-color: $backg;
     border-radius: 20px 20px 20px 20px;
     box-shadow: 2px 2px 5px 2px #dddddd;
     display: flex;
@@ -133,13 +137,12 @@ header {
     flex-wrap: wrap;
   }
   
-
     span {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: baseline;
-    margin-right: 25px;
+    margin-right: 20px;
   }
 
   .click-new {
@@ -148,8 +151,8 @@ header {
     margin-left: 73%;
     margin-top: 15px;
     position: absolute;
-    background-color: #99e2d0;
-    color: #2c9c81;
+    background-color: $third-color;
+    color: $fourth-color;
     font-size: 12px;
     font-weight: bold;
   }
@@ -162,17 +165,50 @@ header {
     object-fit: cover;
   }
 
-caption {
+  .fa-heart{
+      display: inline-block;
+  }
+
+  .a {
+    text-decoration: none;
+  }
+
+figcaption {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     text-align: left;
+    text-decoration: none;
+  }
+  //footer//
+footer {
+    background-color: $footer-bg;
+    padding: 15px;
+    font-family: $font-logo;
+    margin: 0;
+    color: $box-bg;
+  
+  
+  ul {
+  list-style: none;
+  text-decoration: none;
+  margin-top: 5px;
+  padding: 0px;
+  color: $box-bg;
+  font-family: $font-text;
   }
 
-  //footer//
-  .footer {
-    background-color: #2c2c2c;
-    padding: 20px;
+  a {
+    color: white;
   }
-  
-  
+
+  li {
+  padding-top: 5px;
+  text-decoration: none;
+  }
+}
+
+//palettegout//
+//noteenchantée//
+//alafrançaise//
+//délice//
