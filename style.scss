@@ -1,37 +1,6 @@
 @import "variables";
 @import "restos";
-//animation -spinballs//
-.spinner {
-  //spinner de la page d'acceuil
-  height: 100%;
-  width: 100%;
-  background-color: #fff;
-  cursor: progress;
-  position: fixed;
-  z-index: 10000;
-  transform: scale(0);
-  opacity: 0.9;
-  animation: starter 3s;
-  &::before {
-    animation: loader 1500ms infinite;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin: -25px 0 0 -30px;
-    content: "";
-    color: #000;
-    height: 10vh;
-    width: 10vh;
 
-    opacity: 1;
-    z-index: 10500;
-    border-radius: 50%;
-    border-top: solid 5px $primary-color;
-    border-bottom: solid 5px $second-color;
-    border-left: solid 5px  #99e2d0;
-    border-right: solid 5px #ff2dc5;
-  }
-}
 //mobilefirst//
 body {
   padding: 0;
@@ -44,6 +13,8 @@ body {
 }
 .resto-body{
 justify-content: center;
+margin: 0px;
+padding: 0px;
 }
 header {
   text-align: center;
@@ -53,19 +24,25 @@ h1 {
   font-size: 27px;
   font-weight: 400;
   color: $text-color;
-  margin: 5px;
   font-family: $font-logo;
+  margin: 5px;
 }
 
 //localisation//
+/*/.gps-wrap {
+  max-width: 1200px;
+  margin: 5px;
+}/*/
 nav {
+  margin: 0px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   padding: 17px;
   box-shadow: 2px 3px 3px 2px #9a9a9a;
-  }
+  
+}
 
   .localisation {
     background-color: $gps;
@@ -76,119 +53,137 @@ nav {
     margin-right: 10px;
     justify-content: center;
   }
-  p{ 
-  font-family: $font-text;
-  font-weight: 200;
-  font-size: 16px;
-  color: $text-color;
-  margin: 0px 10px;
-}
 
+  p { 
+    font-family: $font-text;
+    font-weight: 200;
+    font-size: 16px;
+    color: $text-color;
+    margin: 0px 10px;
+   }
 //section découvrez des restos//
-.discover{
+.discover {
   background-color: $section-bg;
+  text-align: center;
   opacity: 3.0;
   box-shadow:  2px 2px 3px -3px rgba(0, 0, 0, 0.2);
   padding-top: 30px;
-  padding-bottom: 40px;
-          
+  padding-bottom: 30px;
+           
   h2 {
+    margin: 22px 5% 0px;
     font-size: 24px;
-    font-weight: 500 strong;
+    font-weight: 800 strong;
     font-family: $font-text;
     color: $locate;
-    margin: 25px 5% 0px;
   }
-    
-  .p {
+    .reserve p {
+    margin: 0px 10px 5px;
+    padding-top: 8px;
     font-family: $font-text;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 200 strong;
     color: $text-color;
-    margin: 0px 10px 5px;
     box-shadow: -1px 2px 1px 1px rgba(0, 0, 0, 0.2);
     }
-   
- .btn{
+
+//button explore//
+ .btn {
   background: linear-gradient($second-color, $primary-color);
+  margin-top: 15px;
+  margin-bottom: 20px;
   padding: 14px 24px;
   border-radius: 25px;
   border-style: hidden;
   box-shadow: 0px 2px 2px 2px rgba(5, 1, 1, 0.2);
   width: 70%;
-  margin-top: 15px;
-  margin-bottom: 20px;
+  font-size: 16px;
   }
 }
 
 //section fonctionnement//
-.index-block {
+.section-block {
+  padding: 0px 20px 0px 10px;
+  margin: 12px;
+  margin: 20px 4%;
+  padding: 12px;
+  padding-bottom: 20px;
   display: flex;
   flex-direction: row;
   align-items: baseline;
   justify-content: left;
-  padding: 0px 20px 0px 10px;
-  margin: 12px;
-  padding: 12px;
-  padding-bottom: 20px;
+  border-radius: 14px;
   background-color: $section-bg;
-  box-shadow: -3px 3px 2px 2px rgba(0, 0, 0, 0.3);
-  border-radius: 15px;
   font-weight: bold;
+  box-shadow: -3px 3px 2px 2px rgba(0, 0, 0, 0.3);
 }
-.index-block:hover {
+.section-block:hover {
   background: linear-gradient(to right, rgba(213, 171, 238, 0.2), rgba(166, 86, 220, 0.2));
 }
+
+//chiffres-étapes//
 .step {
+  padding: 4px 8px;
+  margin-right: 4%;
+  margin-left: -22px;
+  border-radius: 50%;
   background-color: $primary-color;
   color: $backg;
-  border-radius: 50%;
-  padding: 4px 8px;
-  margin-right: 5px;
-  margin-left: -22px;
   font-weight: lighter;
 }
 div{
 display: block;
 }
-.index-body section {
+.section-body section {
   margin: 0px 0px;
 }
 
-.index-function {
+.section-function {
   display: flex;
   flex-direction: column;
-  padding-bottom: 40px;
+  padding-bottom: 30px;
   background-color: #f6f6f6;
 }
 
-.index-function .fas {
-  margin-right: 7%;
-  margin-left: 3%;
+.section-function .fas {
+  margin-right: 8%;
+  margin-left: 4%;
   color: gray;
+  font-size: 16px;
   }
 
-.index-restos {
+//clickhover icones//
+.section-function .fas:hover {
+  color:  $primary-color;
+ }
+
+.section-function p {
+  font-family: $font-text;
+  font-size: 16px;
+  color: $text-color;
+  font-weight: 800 strong;
+}
+//section restaurants//
+.section-restos {
   display: flex;
   flex-direction: column;
+  width: 100%;
   background-color: $section-bg;
   box-shadow: inset 0px 1px 2px 1px rgba(0, 0, 0, 0.1);
-  width: 100%;
 }
 
-h2.index {
+h2.index {margin: 0px 15px 20px;
   font-size: 24px;
-  font-weight: 800 bold;
+  font-weight: 800;
   font-family: $font-text;
   color: $text-color;
-  margin: 0px 15px 20px;
+  text-align: left;
 }
-
 h2.index-block {
   margin: 25px 25px;
-  padding-top: 40px;
+  padding-top: 30px;
 }
-.index-restaurants a {
+.section-restaurants a {
   margin: 25px 20px;
   width: 35%;
 }
@@ -270,7 +265,7 @@ a:-webkit-any-link {
   -webkit-text-stroke: 1px #ff00f2;
   transition: 2s ease-out;
   background: linear-gradient(210deg, $heart-gradient)right;
-  
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-size: 0%;
 }
@@ -302,7 +297,7 @@ figure .fas.hidden {
   -webkit-text-stroke: 1px white;
   transition: 1s ease-out;
   background: linear-gradient(210deg, $heart-gradient)right;
-  
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-size: 0%;
 }
@@ -311,7 +306,7 @@ figure .fas.hidden:hover {
   opacity: 1;
   background-size: 100%;
 }
-//figcaption// 
+//figcaption-resto// 
 figcaption {
   min-width: 98%;
 }
@@ -323,8 +318,9 @@ figcaption {
 
 figcaption p {
   font-size: 14px;
-  font-weight: 100;
-  color: black;
+  font-weight: 200;
+  color: $text-color;
+  text-align: left;
   margin: 0px 10px;
 }
 .a {
@@ -334,34 +330,34 @@ figcaption p {
 
 //footer//
 .footer {
-  padding: 10px;
   background-color: $footer-bg;
   display: flex;
+  text-align: left;
   flex-direction: column;
   justify-content: space-between;
   font-family: $font-logo;
   color: $box-bg;
- 
+  padding: 10px;
+  margin: 0px;
+  line-height: 0.5em;
+
   ul {
   list-style: none;
   text-decoration: none;
-  margin-top: 5px;
-  padding: 10px;
   font-family: $font-text;
+  padding: 10px; 
   }
-
   a {
-    font-size: 15px;
+    font-size: 14px;
     color: $box-bg;
   }
-  
   li {
   text-decoration: none;
-  margin-top: 5px;
+  padding: 5px; 
   }
 }
 
 //palettegout//
 //noteenchantée//
 //alafrançaise//
-//délice//
+//délice/

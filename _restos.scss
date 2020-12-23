@@ -1,46 +1,21 @@
-@keyframes check-appear {
-  from {
-    margin-left: 100%;
-  }
-  to {
-    margin-left: 75%;
-  }
-}
-
-@keyframes move-price {
-  from {
-    margin-right: 0%;
-  }
-  to {
-    margin-right: 25%;
-  }
-}
-
-@keyframes check-rotate {
-  from {
-    transform: rotate(0);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 html {
     max-width: 100%;
     overflow-x: hidden;
-  }
+}
   
-  body {
+body {
     margin: 0px;
     padding: 0px;
     display: flex;
     flex-direction: column;
-  }
-  .header-title{
-    padding: 0px;
-    margin: 0px;
-  }
-  .fas.back {
+}
+
+.header-title{
+  padding: 0px;
+  margin: 0px;
+}
+
+.fas.back {
     position: absolute;
     color: #2c2c2c;
     margin-right: 90%;
@@ -64,8 +39,9 @@ html {
   }
 
   h2.plat-title {
-    font-size: 15px;
+    font-size: 16px;
     font-family: $font-text;
+    font-weight: 200;
     margin: 10px;
     position: relative;
   }
@@ -93,13 +69,13 @@ html {
   }
   h3 {
     font-size: 18px;
-    font-weight: 400;
+    font-weight: 600;
     color: black;
     margin: 15px 0px 0px;
   }
   h4 {
-    font-size: 13px;
-    font-weight: 100;
+    font-size: 14px;
+    font-weight: 200;
     color: #2c2c2c;
     margin: 2px -60px 10px 0px;
   }
@@ -158,14 +134,6 @@ figure .fas.hidden:hover {
   font-size: 14px;
   margin-right: 0px;
 }
-span {
-  display: flex;
-  flex-direction: row;
-  margin-right: 10px;
-  align-items: baseline;
-  justify-content: space-between;
-}
-
 //check appear//
   .fas.fa-check {
     background-color: $box-bg;
@@ -187,7 +155,28 @@ span {
     width: 100px;
     animation: check-appear 0.5s;
   }
-  
+  .load-wrapper {
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    z-index: 1;
+    animation: load-wrapper 5s;
+  }
+  @keyframes load-wrapper {
+    0% {
+      z-index: 1;
+      position: fixed;
+    }
+    75% {
+      z-index: 1;
+    }
+    100% {
+      z-index: -1;
+    }
+  }
   .plat-box:hover h4 {
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -226,8 +215,7 @@ span {
     padding: 15px 40px;
   }
    
-  
-  //footer//
+//footer//
   
  
   

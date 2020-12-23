@@ -1,30 +1,3 @@
-@keyframes check-appear {
-  from {
-    margin-left: 100%;
-  }
-  to {
-    margin-left: 75%;
-  }
-}
-
-@keyframes move-price {
-  from {
-    margin-right: 0%;
-  }
-  to {
-    margin-right: 25%;
-  }
-}
-
-@keyframes check-rotate {
-  from {
-    transform: rotate(0);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 html {
   max-width: 100%;
   overflow-x: hidden;
@@ -69,8 +42,9 @@ h2.resto {
 }
 
 h2.plat-title {
-  font-size: 15px;
+  font-size: 16px;
   font-family: "Roboto";
+  font-weight: 200;
   margin: 10px;
   position: relative;
 }
@@ -102,14 +76,14 @@ h2.plat-title::after {
 
 h3 {
   font-size: 18px;
-  font-weight: 400;
+  font-weight: 600;
   color: black;
   margin: 15px 0px 0px;
 }
 
 h4 {
-  font-size: 13px;
-  font-weight: 100;
+  font-size: 14px;
+  font-weight: 200;
   color: #2c2c2c;
   margin: 2px -60px 10px 0px;
 }
@@ -175,14 +149,6 @@ figure .fas.hidden:hover {
   margin-right: 0px;
 }
 
-span {
-  display: flex;
-  flex-direction: row;
-  margin-right: 10px;
-  align-items: baseline;
-  justify-content: space-between;
-}
-
 .fas.fa-check {
   background-color: white;
   margin: 30%;
@@ -204,6 +170,30 @@ plat-box:hover .check-appear {
   margin-left: 70%;
   width: 100px;
   animation: check-appear 0.5s;
+}
+
+.load-wrapper {
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  z-index: 1;
+  animation: load-wrapper 5s;
+}
+
+@keyframes load-wrapper {
+  0% {
+    z-index: 1;
+    position: fixed;
+  }
+  75% {
+    z-index: 1;
+  }
+  100% {
+    z-index: -1;
+  }
 }
 
 .plat-box:hover h4 {
@@ -246,37 +236,6 @@ plat-box:hover .check-appear {
   padding: 15px 40px;
 }
 
-.spinner {
-  height: 100%;
-  width: 100%;
-  background-color: #fff;
-  cursor: progress;
-  position: fixed;
-  z-index: 10000;
-  transform: scale(0);
-  opacity: 0.9;
-  animation: starter 3s;
-}
-
-.spinner::before {
-  animation: loader 1500ms infinite;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin: -25px 0 0 -30px;
-  content: "";
-  color: #000;
-  height: 10vh;
-  width: 10vh;
-  opacity: 1;
-  z-index: 10500;
-  border-radius: 50%;
-  border-top: solid 5px #9356dc;
-  border-bottom: solid 5px #ff79da;
-  border-left: solid 5px  #99e2d0;
-  border-right: solid 5px #ff2dc5;
-}
-
 body {
   padding: 0;
   margin: 0;
@@ -289,6 +248,8 @@ body {
 
 .resto-body {
   justify-content: center;
+  margin: 0px;
+  padding: 0px;
 }
 
 header {
@@ -300,11 +261,16 @@ h1 {
   font-size: 27px;
   font-weight: 400;
   color: black;
-  margin: 5px;
   font-family: "Shrikhand";
+  margin: 5px;
 }
 
+/*/.gps-wrap {
+  max-width: 1200px;
+  margin: 5px;
+}/*/
 nav {
+  margin: 0px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -334,66 +300,70 @@ p {
 
 .discover {
   background-color: #EFEFEF;
+  text-align: center;
   opacity: 3.0;
   box-shadow: 2px 2px 3px -3px rgba(0, 0, 0, 0.2);
   padding-top: 30px;
-  padding-bottom: 40px;
+  padding-bottom: 30px;
 }
 
 .discover h2 {
+  margin: 22px 5% 0px;
   font-size: 24px;
-  font-weight: 500 strong;
+  font-weight: 800 strong;
   font-family: "Roboto";
   color: #2c2c2c;
-  margin: 25px 5% 0px;
 }
 
-.discover .p {
+.discover .reserve p {
+  margin: 0px 10px 5px;
+  padding-top: 8px;
   font-family: "Roboto";
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 200 strong;
   color: black;
-  margin: 0px 10px 5px;
   box-shadow: -1px 2px 1px 1px rgba(0, 0, 0, 0.2);
 }
 
 .discover .btn {
   background: linear-gradient(#ff79da, #9356dc);
+  margin-top: 15px;
+  margin-bottom: 20px;
   padding: 14px 24px;
   border-radius: 25px;
   border-style: hidden;
   box-shadow: 0px 2px 2px 2px rgba(5, 1, 1, 0.2);
   width: 70%;
-  margin-top: 15px;
-  margin-bottom: 20px;
+  font-size: 16px;
 }
 
-.index-block {
+.section-block {
+  padding: 0px 20px 0px 10px;
+  margin: 12px;
+  margin: 20px 4%;
+  padding: 12px;
+  padding-bottom: 20px;
   display: flex;
   flex-direction: row;
   align-items: baseline;
   justify-content: left;
-  padding: 0px 20px 0px 10px;
-  margin: 12px;
-  padding: 12px;
-  padding-bottom: 20px;
+  border-radius: 14px;
   background-color: #EFEFEF;
-  box-shadow: -3px 3px 2px 2px rgba(0, 0, 0, 0.3);
-  border-radius: 15px;
   font-weight: bold;
+  box-shadow: -3px 3px 2px 2px rgba(0, 0, 0, 0.3);
 }
 
-.index-block:hover {
+.section-block:hover {
   background: linear-gradient(to right, rgba(213, 171, 238, 0.2), rgba(166, 86, 220, 0.2));
 }
 
 .step {
+  padding: 4px 8px;
+  margin-right: 4%;
+  margin-left: -22px;
+  border-radius: 50%;
   background-color: #9356dc;
   color: #fbfbfb;
-  border-radius: 50%;
-  padding: 4px 8px;
-  margin-right: 5px;
-  margin-left: -22px;
   font-weight: lighter;
 }
 
@@ -401,45 +371,58 @@ div {
   display: block;
 }
 
-.index-body section {
+.section-body section {
   margin: 0px 0px;
 }
 
-.index-function {
+.section-function {
   display: flex;
   flex-direction: column;
-  padding-bottom: 40px;
+  padding-bottom: 30px;
   background-color: #f6f6f6;
 }
 
-.index-function .fas {
-  margin-right: 7%;
-  margin-left: 3%;
+.section-function .fas {
+  margin-right: 8%;
+  margin-left: 4%;
   color: gray;
+  font-size: 16px;
 }
 
-.index-restos {
+.section-function .fas:hover {
+  color: #9356dc;
+}
+
+.section-function p {
+  font-family: "Roboto";
+  font-size: 16px;
+  color: black;
+  font-weight: 800 strong;
+}
+
+.section-restos {
   display: flex;
   flex-direction: column;
+  width: 100%;
   background-color: #EFEFEF;
   box-shadow: inset 0px 1px 2px 1px rgba(0, 0, 0, 0.1);
-  width: 100%;
 }
 
 h2.index {
+  margin: 0px 15px 20px;
   font-size: 24px;
-  font-weight: 800 bold;
+  font-weight: 800;
   font-family: "Roboto";
   color: black;
-  margin: 0px 15px 20px;
+  text-align: left;
 }
 
 h2.index-block {
   margin: 25px 25px;
-  padding-top: 40px;
+  padding-top: 30px;
 }
 
-.index-restaurants a {
+.section-restaurants a {
   margin: 25px 20px;
   width: 35%;
 }
@@ -528,6 +511,7 @@ a:-webkit-any-link {
   -webkit-text-stroke: 1px #ff00f2;
   transition: 2s ease-out;
   background: linear-gradient(210deg, #ff79da, #9356dc, #ff2dc5, #ffbc2d, #ff7300) right;
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-size: 0%;
 }
@@ -560,6 +544,7 @@ figure .fas.hidden {
   -webkit-text-stroke: 1px white;
   transition: 1s ease-out;
   background: linear-gradient(210deg, #ff79da, #9356dc, #ff2dc5, #ffbc2d, #ff7300) right;
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-size: 0%;
 }
@@ -581,8 +566,9 @@ figcaption div {
 
 figcaption p {
   font-size: 14px;
-  font-weight: 100;
+  font-weight: 200;
   color: black;
+  text-align: left;
   margin: 0px 10px;
 }
 
@@ -592,30 +578,32 @@ figcaption p {
 }
 
 .footer {
-  padding: 10px;
   background-color: #363636;
   display: flex;
+  text-align: left;
   flex-direction: column;
   justify-content: space-between;
   font-family: "Shrikhand";
   color: white;
+  padding: 10px;
+  margin: 0px;
+  line-height: 0.5em;
 }
 
 .footer ul {
   list-style: none;
   text-decoration: none;
-  margin-top: 5px;
-  padding: 10px;
   font-family: "Roboto";
+  padding: 10px;
 }
 
 .footer a {
-  font-size: 15px;
+  font-size: 14px;
   color: white;
 }
 
 .footer li {
   text-decoration: none;
-  margin-top: 5px;
+  padding: 5px;
 }
 /*# sourceMappingURL=style.css.map */
