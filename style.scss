@@ -1,4 +1,4 @@
-@import "load-ball";
+@import "loadball";
 @import "variables";
 @import "restos";
 
@@ -267,7 +267,7 @@ a:-webkit-any-link {
   -webkit-text-stroke: 1px #ff00f2;
   transition: 2s ease-out;
   background: linear-gradient(210deg, $heart-gradient)right;
-  -webkit-background-clip: text;
+  
   -webkit-text-fill-color: transparent;
   background-size: 0%;
 }
@@ -299,7 +299,7 @@ figure .fas.hidden {
   -webkit-text-stroke: 1px white;
   transition: 1s ease-out;
   background: linear-gradient(210deg, $heart-gradient)right;
-  -webkit-background-clip: text;
+  
   -webkit-text-fill-color: transparent;
   background-size: 0%;
 }
@@ -490,7 +490,7 @@ figure {
       -webkit-text-stroke: 1px white;
       transition: 0.4s ease-out;
       background: linear-gradient(210deg, $heart-gradient)right;
-      -webkit-background-clip: text;
+     
       -webkit-text-fill-color: transparent;
       background-size: 0%;
       &:hover{
