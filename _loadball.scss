@@ -39,7 +39,7 @@
     width: 30px;
     height: 30px;
     box-sizing: border-box;
-    background-color: #ff79f8;
+    background-color: #b256dc;
     position: absolute;
     bottom: 0;
     right: 0;
@@ -76,6 +76,7 @@
       transform: scale(4);
     }
     25% {
+      background: #9356dc;
       transform: rotate(-360deg);
     }
     
@@ -112,7 +113,7 @@
       transform: rotate(0deg);
     }
     50% {
-       background: magenta;
+       background:#a656dc;
       transform: translate(5px, 5px);
     }
     100% {
