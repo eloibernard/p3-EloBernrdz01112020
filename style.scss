@@ -3,21 +3,6 @@
 @import "restos";
 
 
-@mixin plat-box{
-  font-family: $font-text;
-  font-weight: 200;
-  font-size: 16px;
-  color: $text-color;
-}
-@mixin discover{ 
-background-color: $section-bg;
-  text-align: center;
-  opacity: 3.0;
-  box-shadow:  2px 2px 3px -3px rgba(0, 0, 0, 0.2);
-  padding-top: 30px;
-  padding-bottom: 30px
-}
-
 //mobilefirst//
 body {
   padding: 0;
@@ -563,17 +548,17 @@ figure {
   .discover {
     background-color: $section-bg;
     padding: 30px;
-    & p {
-    @include plat-box;
+    //& p {
+    //@include plat-box;
     }
-  }
+  
   
   .plat-box {
     display: flex;
     flex-direction: row;
     align-items: baseline;
     justify-content: left;
-    @include plat-box;
+    //@include plat-box;//
     margin: 20px 5%;
     padding: 10px;
     background-color: $section-bg;
