@@ -540,7 +540,7 @@ figure {
   }
   
   .localisation {
-    background-color: darken($gps);
+    background-color: darken($gps, 5);
     box-shadow: inset 0 3px 5px -5px $footer-bg;
   }
   
@@ -548,7 +548,7 @@ figure {
     background-color: $section-bg;
     padding: 30px;
     & p {
-    @include font-palette(discover);
+    @include discover;
     }
   }
   
