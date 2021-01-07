@@ -30,12 +30,9 @@ body {
     background-color: $section-bg;
     border-radius: 50px 50px 0px 0px;
   }
-  h2.resto {
-    font-size: 24px;
-    font-weight: 400;
-    font-family: $font-logo;
-    color: $text-color;
-    margin: 10px 3% 0px;
+  .plat-type{
+    overflow: :hidden;
+    min-height: 150px;
   }
 
   h2.plat-title {
@@ -45,6 +42,7 @@ body {
     margin: 10px;
     position: relative;
   }
+
   h2.plat-title::after {
     content: "";
     position: absolute;
@@ -54,11 +52,18 @@ body {
     background-color: $third-color; 
     bottom: -5px;
   }
-  .plat-type {
-    overflow: hidden;
-    min-height: 150px;
+
+  h2.resto {
+    font-size: 24px;
+    font-weight: 400;
+    font-family: $font-logo;
+    color: $text-color;
+    margin: 10px 3% 0px;
   }
-  .plat-box {
+
+  /*/block plat-menu/*/
+  
+    .plat-box {
     margin: 10px;
     padding: 0px 20px 0px 10px;
     background-color: white;
@@ -68,22 +73,10 @@ body {
     overflow: hidden;
   }
   h3 {
-    font-size: 18px;
-    font-weight: 600;
+    font-size: 16px;
+    font-weight: 400;
     color: black;
     margin: 15px 0px 0px;
-  }
-  h4 {
-    font-size: 14px;
-    font-weight: 200;
-    color: #2c2c2c;
-    margin: 2px -60px 10px 0px;
-  }
-  .plat-box h4 {
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-    max-width: 85%;
   }
   .plat-desc {
     display: flex;
@@ -93,7 +86,39 @@ body {
     align-items: baseline;
     width: 100%;
   }
-  /*/title and heart figure/*/
+  .plat-box h4 {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 85%;
+  }
+  h4 {
+    font-size: 14px;
+    font-weight: 200;
+    color: #2c2c2c;
+    margin: 2px -60px 10px 0px;
+  }
+  .prix {
+    font-size: 14px;
+    margin-right: 0px;
+  }
+  /*/prix span/*/
+  span {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+ /*/check span/*/
+  span {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-right: 25px;
+  }
+
+
+   /*/title and heart figure/*/
 .fas-title .fas:not(.hidden) {
   margin-top: -35px;
   position: absolute;
@@ -110,9 +135,9 @@ body {
   position: absolute;
   margin-left: 83%;
   opacity: 0;
-  font-size: 21px;
+  font-size: 20px;
   -webkit-text-stroke: black;
-  transition: 1s ease-out;
+  transition: 0.5s ease-out;
   background: linear-gradient(210deg, $heart-gradient)right;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -123,35 +148,27 @@ body {
   background-size: 100%;
   cursor: pointer;
 }
-figure .fas.hidden:hover {
-  opacity: 1;
-  background-size: 100%;
-}
 
-.prix {
-  display: flex;
-  float: right;
-  font-size: 14px;
-  margin-right: 0px;
-}
 //check appear//
-  .fas.fa-check {
+.check-appear {
+    display: none;
+    background-color: $third-color;
+  }
+ .fas.fa-check {
     background-color: $box-bg;
     margin: 30%;
     border-radius: 50%;
     color: $third-color;
-    padding: 3px;
-  }
-  .check-appear {
-    display: none;
-    background-color: $third-color;
-  }
+    padding: 2px;
+  } 
+
+  //checkblock-animation//
   plat-box:hover .check-appear {
     display: block;
     position: relative;
     height: 100px;
     margin-top: -100px;
-    margin-left: 70%;
+    margin-left: 90%;
     width: 100px;
     animation: check-appear 0.5s;
   }
@@ -160,15 +177,15 @@ figure .fas.hidden:hover {
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
-    width: 70%;
+    width: 65%;
   }
   .plat-box:hover .price {
     animation: move-price 0.5s;
-    margin-right: 15%;
+    margin-right: 20%;
   }
   
   .plat-box:hover .fa-check {
-    margin: 70% 15px;
+    margin: 60% 20px;
     animation: check-rotate 0.5s;
   }
   
@@ -194,13 +211,25 @@ figure .fas.hidden:hover {
     padding: 15px 40px;
   }
    
+//figure resto//
+figure {
+  margin: 0px 10% 0px 10px;
+  margin-right: 10%;
+  min-width: 96%;
+  height: 250px;
+  background-color: white;
+  border-radius: 20px 20px 20px 20px;
+  box-shadow: 2px 2px 5px 2px #dddddd;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  }
+figure .fas.hidden:hover {
+  opacity: 1;
+  background-size: 100%;
+} 
+ figure .fas:not(.hidden):hover {
+  opacity: 0;
+  }
+
 //footer//
-  
- 
-  
-  
-  
-  
-  
-  
-  
