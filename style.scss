@@ -1,7 +1,6 @@
 @import "loadball";
 @import "variables";
-@import "restos";
-
+@import "listrestos";
 
 //mobilefirst//
 body {
@@ -94,12 +93,13 @@ nav {
   background: linear-gradient($second-color, $primary-color);
   margin-top: 15px;
   margin-bottom: 20px;
-  padding: 14px 24px;
-  border-radius: 25px;
+  padding: 14px 22px;
+  border-radius: 20px;
   border-style: hidden;
-  box-shadow: 0px 2px 2px 2px rgba(5, 1, 1, 0.2);
-  width: 70%;
-  font-size: 16px;
+  box-shadow: 0
+  px 2px 2px 2px rgba(5, 1, 1, 0.2);
+  //width: 75%;
+  font-size: 14px;
   }
 }
 
@@ -146,7 +146,6 @@ display: block;
   padding-bottom: 30px;
   background-color: #f6f6f6;
 }
-
 
 .section-function .fas {
   margin-right: 8%;
@@ -216,9 +215,9 @@ figure {
   box-shadow: 1px 0px 0px 1px #E0E0E0;
 }
 .click-new {
-  border-radius: 10%;
-  padding: 5px 10px;
-  margin-left: 70%;
+  border-radius: 8%;
+  //padding: 5px 10px;
+  //margin-left: 70%;
   margin-top: 15px;
   position: absolute;
   float: right;
@@ -265,8 +264,8 @@ a:-webkit-any-link {
   margin-left: 83%;
   opacity: 0;
   font-size: 21px;
-  -webkit-text-stroke: 1px #ff00f2;
-  transition: 2s ease-out;
+  -webkit-text-stroke: 1px black;
+  transition: 0.5s ease-out;
   background: linear-gradient(210deg, $heart-gradient)right;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -281,7 +280,7 @@ a:-webkit-any-link {
 figure .fas:not(.hidden) {
   margin-top: 0px;
   position: absolute;
-  margin-left: 83%;
+  margin-left: 85%;
   font-size: 20px;
   -webkit-text-stroke: 1px black;
   color: transparent;
@@ -294,15 +293,15 @@ figure .fas:not(.hidden) {
 figure .fas.hidden {
   margin-top: -1px;
   position: absolute;
-  margin-left: 83%;
-  opacity: 0;
-  font-size: 21px;
+  margin-left: 85%;
+  font-size: 20px;
   -webkit-text-stroke: 1px white;
-  transition: 1s ease-out;
+  transition: 0.5s ease-out;
+  opacity: 0;
+  background-size: 0%;
   background: linear-gradient(210deg, $heart-gradient)right;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-size: 0%;
 }
 
 figure .fas.hidden:hover {
@@ -364,7 +363,8 @@ figcaption p {
 //noteenchantée//
 //alafrançaise//
 //délice/
-@media screen and (min-width: 900px) {
+
+/*@media screen and (min-width: 900px) {
   header {
     margin: 0px;
     padding: 0px;
@@ -411,9 +411,9 @@ figcaption p {
   .fas-title .fas.hidden {
     margin-left: 97%;
   }
-}
+}*/
 
-@media screen and (min-width: 720px) {
+/*/@media screen and (min-width: 720px) {
   figure {
     max-width: 22%;
   }
@@ -461,7 +461,7 @@ figcaption p {
     margin-left: 24%;
   }
 }
-figure {
+/*/figure {
     margin: 0px 10% 0px 10px;
     margin-right: 10%;
     min-width: 96%;
