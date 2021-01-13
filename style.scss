@@ -174,7 +174,8 @@ display: block;
   box-shadow: inset 0px 1px 2px 1px rgba(0, 0, 0, 0.1);
 }
 
-h2.index {margin: 0px 15px 20px;
+h2.index {
+  margin: 25px 15px 10px;
   font-size: 24px;
   font-weight: 800;
   font-family: $font-text;
@@ -182,7 +183,7 @@ h2.index {margin: 0px 15px 20px;
   text-align: left;
 }
 h2.index-block {
-  margin: 25px 25px;
+  margin: 25px 20px;
   padding-top: 30px;
 }
 .section-restaurants a {
@@ -191,7 +192,7 @@ h2.index-block {
 }
 
 h3.index {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 500 strong;
   color: $text-color;
   margin: 0px 10px 5px;
@@ -203,7 +204,7 @@ html {
 figure {
   margin: 0px 10% 0px 10px;
   padding: 1px 2px 2px 2px;
-  padding-bottom: 20px;
+  padding-bottom: 15px;
   margin-right: 8%;
   min-width: 95%;
   height: 250px;
@@ -216,8 +217,8 @@ figure {
 }
 .click-new {
   border-radius: 8%;
-  //padding: 5px 10px;
-  //margin-left: 70%;
+  padding: 5px 10px;
+  margin-left: 70%;
   margin-top: 15px;
   position: absolute;
   float: right;
@@ -267,7 +268,7 @@ a:-webkit-any-link {
   -webkit-text-stroke: 1px black;
   transition: 0.5s ease-out;
   background: linear-gradient(210deg, $heart-gradient)right;
-  
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-size: 0%;
 }
@@ -300,7 +301,7 @@ figure .fas.hidden {
   opacity: 0;
   background-size: 0%;
   background: linear-gradient(210deg, $heart-gradient)right;
-  
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -331,7 +332,7 @@ figcaption p {
 } 
 
 //footer//
-.footer {
+.foot {
   background-color: $footer-bg;
   display: flex;
   text-align: left;
@@ -343,11 +344,20 @@ figcaption p {
   margin: 0px;
   line-height: 0.5em;
 
+  h2.footer {
+    background-color: $footer-bg;
+    font-family: $font-logo;
+    font-size: 20px;
+    color: $box-bg;
+    margin: 5px;
+    padding-top: 5px;
+  }
+    
   ul {
   list-style: none;
   text-decoration: none;
   font-family: $font-text;
-  padding: 10px;
+  padding: 5px;
   }
   a {
     font-size: 14px;
@@ -368,7 +378,7 @@ figcaption p {
   header {
     margin: 0px;
     padding: 0px;
-    height: 42%;
+    height: 40%;
     overflow: hidden;
   }
   header .img {
@@ -385,7 +395,7 @@ figcaption p {
     flex-direction: row;
     flex-wrap: wrap-reverse;
   }
-  .dish-type {
+  .plat-type {
     flex: 3;
   }
   .footer {
@@ -395,22 +405,20 @@ figcaption p {
   .btn--order {
     position: absolute;
     display: block;
-    height: 50px;
-    width: 95%;
-    margin: 70px 70px 20px 70px;
+    height: 60px;
+    width: 90%;
+    margin: 60px 60px 20px 60px;
   }
   .fas.back {
     margin-left: -5%;
   }
   .plat-box:hover .fa-check {
-    animation: check-rotate 0.5s;
+    animation: check-appear 0.5s;
   }
   .fas-title .fas:not(.hidden) {
-    margin-left: 95%;
+    margin-left: 98%;
   }
   .fas-title .fas.hidden {
-    margin-left: 97%;
+    margin-left: 98%;
   }
 }
-
-  
